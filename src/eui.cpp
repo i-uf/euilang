@@ -11,7 +11,7 @@
 
 using namespace std;
 
-const string version = "0.1.0";
+const string version = "0.1.1";
 
 void wrong_usage() { cerr << "usage: eui <fileName>" << endl; }
 

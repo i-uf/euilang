@@ -20,8 +20,6 @@ void Interpreter::parseStatement() {
         case Token::Var: case Token::Const:
             parseVariableDeclaration();
             break;
-        case Token::Fun:
-            break;
         case Token::If:
             parseIfStatement();
             break;
@@ -44,7 +42,7 @@ void Interpreter::parseStatement() {
             parsePrint();
             break;
         default:
-            error("unsupported operation");
+            error("syntax error: unsupported statement: " + current().value);
     }
 }
 
@@ -115,6 +113,7 @@ void Interpreter::parseBreakStatement() {
     loopable = false;
     loop_pc = 0;
     loop_line = 0;
+    condition = false;
 }
 
 Value Interpreter::parseExpression() {

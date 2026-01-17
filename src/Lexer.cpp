@@ -47,6 +47,11 @@ TokenInfo Lexer::next_token() {
         if (identifier == "부의") return {Token::Not,       "부의" };
         if (identifier == "반의") return {Token::Negate,    "반의" };
 
+        if (identifier == "대의") return {Token::GreaterThan,"대의" };
+        if (identifier == "소의") return {Token::LessThan,   "소의" };
+        if (identifier == "대의의") return {Token::GreaterOrEqualThan,"대의의" };
+        if (identifier == "소의의") return {Token::LessOrEqualThan,   "소의의" };
+
         if (identifier == "표의") return {Token::Print,     "표의" };
 
         if (identifier == "읭")   return {Token::Boolean,   "읭"  };
