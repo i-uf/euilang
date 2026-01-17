@@ -70,7 +70,9 @@
 의: 의! a a 곱의 10
 ```
 if, then, else = 의?, 의:, 늬:
+
 if엔 항상 Boolean이 들어감
+
 의:와 늬:는 여러번 사용 가능(다음 if가 올 때 까지)
 
 ### 4. while/continue/break
