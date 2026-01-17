@@ -103,3 +103,42 @@ while, continue, break = 의의?, 계의, 종의(예시엔 나오지 않음)
 (현재 string 타입은 사용 불가)
 
 true, false = 읭, 닁
+
+## Example
+
+예제 코드(example.eui)
+
+```
+의! a 10
+의!! b 10
+
+의? a 의 b
+의: 표의 a
+늬: 표의 a 덧의 b
+
+의! a 0
+
+의의? a 늬 b
+의: 표의 a
+의: 의! a a 덧의 1
+의: 계의
+
+의!! b 20
+표의 b
+```
+
+정상 출력시 결과는 이와 같다:
+```
+10
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+./example.eui:15: runtime error: syntax error: cannot redefine variable: b is already declared as a const
+```
